@@ -1,0 +1,21 @@
+
+public class Kalkulator {
+    public static void main(String[] args) {
+        double kredo = 10000;
+        double okres = 25;
+
+        if (okres >=6 && okres <= 12) {
+            System.out.println((String.format("%.2f",(kredo * 1.025) / okres)) + " - wysokosc miesiecznej raty");
+
+        }
+        if (okres > 12 && okres <=24) {
+            System.out.println((String.format("%.2f",(kredo * 1.05) / okres)) + " - wysokosc miesiecznej raty");
+        }
+        if (okres > 24 && okres <= 48) {
+            System.out.println(String.format("%.2f", (kredo * 1.1 / okres)) + " - wysokosc miesiecznej raty");
+        }
+        if (okres < 6 || okres > 48)
+                System.out.println("nie udzielamy kredytu na taka ilosc rat");
+        }
+
+    }
